@@ -1,0 +1,86 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1082" measuredH="800" mockupW="960" mockupH="800">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="122" y="0" w="960" h="800" measuredW="960" measuredH="800" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <override controlID="0" x="0" y="0" w="960" h="800"/>
+        <src>./assets/browser.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Component" x="122" y="70" w="960" h="40" measuredW="960" measuredH="40" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C83.5%2C81%2C96.5%22%20href%3D%22post-list-admin.bmml%22%20alt%3D%22post-list-admin%22%20id%3D%222%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C83.5%2C81%2C96.5%22%20href%3D%22post-list-admin.bmml%22%20alt%3D%22post-list-admin%22%20id%3D%222%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C83.5%2C81%2C96.5%22%20href%3D%22post-list.bmml%22%20alt%3D%22post-list%22%20id%3D%222%22/%3E%0A</map>
+        <override controlID="0" x="0" y="0" w="960" h="40"/>
+        <override controlID="2" x="15" y="8" w="86" h="24">
+          <hrefs>post-list-admin%26bm%3Bpost-list-admin.bmml%26bm%3Bpost-list-admin.bmml%26bm%3Bpost-list-admin.bmml</hrefs>
+        </override>
+        <src>./assets/header.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="367" y="205" w="679" h="-1" measuredW="100" measuredH="10" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="373" y="178" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>post-detail-admin%26bm%3Bpost-detail-admin.bmml%26bm%3Bpost-detail-admin.bmml%26bm%3Bpost-detail-admin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22251%2C178%2C345%2C197%22%20href%3D%22post-detail-admin.bmml%22%20alt%3D%22post-detail-admin%22%20id%3D%223%22/%3E</map>
+        <text>Meteor%u73AF%u5883%u642D%u5EFA</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="373" y="223" w="-1" h="-1" measuredW="115" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Meteor+AngularJS</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::HRule" x="367" y="247" w="679" h="-1" measuredW="100" measuredH="10" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="372" y="267" w="-1" h="-1" measuredW="113" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>LightTable%u8BD5%u7528%u4F53%u4F1A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="901" y="177" w="-1" h="-1" measuredW="66" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2014-01-10</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="901" y="222" w="-1" h="-1" measuredW="69" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2014-01-08</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="901" y="263" w="-1" h="-1" measuredW="70" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2013-12-24</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TagCloud" x="158" y="137" w="183" h="282" measuredW="350" measuredH="110" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u6240%u6709%20Meteor%20AngularJS%20C++%20Python%20%u524D%u7AEF%20web</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::ButtonBar" x="596" y="324" w="-1" h="-1" measuredW="195" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%3C%2C%201%2C%202%2C%203%2C%204%2C%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Button" x="990" y="174" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="990" y="219" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="990" y="259" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="372" y="125" w="-1" h="-1" measuredW="76" measuredH="27" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>post-editor%26bm%3Bpost-editor.bmml%26bm%3Bpost-editor.bmml%26bm%3Bpost-editor.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22250%2C125%2C326%2C152%22%20href%3D%22post-editor.bmml%22%20alt%3D%22post-editor%22%20id%3D%2215%22/%3E</map>
+        <text>new%20post</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

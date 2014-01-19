@@ -1,0 +1,12 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1074" measuredH="79" mockupW="960" mockupH="40">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="114" y="39" w="960" h="40" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="129" y="47" w="-1" h="-1" measuredW="86" measuredH="24" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>post-list%26bm%3Bpost-list.bmml%26bm%3Bpost-list.bmml%26bm%3Bpost-list.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C13.5%2C81%2C26.5%22%20href%3D%22post-list.bmml%22%20alt%3D%22post-list%22%20id%3D%222%22/%3E%0A</map>
+        <text>blog.ccll.im</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

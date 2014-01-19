@@ -1,0 +1,26 @@
+<template name="tags">
+    <div class="panel panel-info">
+
+        <div class="panel-heading">
+            Tags
+        </div>
+
+        <div class="panel-body" ng-cloak>
+            {{> tag-list}}
+            <!--<div ng-template="tag-list"></div>-->
+        </div>
+
+    </div>
+</template>
+
+
+<template name="tag-list">
+    <div class="list-group">
+        <a ng-repeat="t in post_list.tags"
+           ui-sref="post-list({tag:encodeURIComponent(t)})"
+           class="list-group-item" ng-class="{active:t==tag}"
+                >
+            [[ t ]]
+        </a>
+    </div>
+</template>

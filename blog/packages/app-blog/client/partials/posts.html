@@ -1,0 +1,51 @@
+<template name="posts">
+
+    <div ng-show="!err" ng-cloak>
+
+        <div ng-show="loading_posts">
+            {{> spinner-icon}}
+        </div>
+
+        <div ng-show="!loading_posts">
+            <div>
+                {{> post-table}}
+            </div>
+
+            <div>
+                {{> post-pagination}}
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="err">
+        [[ err.reason ]]
+    </div>
+
+</template>
+
+
+<template name="post-table">
+    <div class="list-group">
+        <a ng-repeat="p in post_list.posts" ui-sref="post-detail({id:p._id})" class="list-group-item">
+            <span class="text-140percent">[[ p.title ]]</span>
+            <span class="pull-right">[[ format_date(p.created_at) ]]</span>
+        </a>
+    </div>
+</template>
+
+
+<template name="post-pagination">
+    <ul class="pagination">
+        <li ng-class="{'disabled':page*1<=1*1}">
+            <a ng-if="page*1<=1">&lsaquo;</a>
+            <a ng-if="page*1>1" ui-sref="post-list({page: page*1-1})">&lsaquo;</a>
+        </li>
+        <li ng-repeat="pno in [1, post_list.page_count] | range" ng-class="{active:pno*1==page*1}">
+            <a ui-sref="post-list({page:pno})">[[ pno ]]</a>
+        </li>
+        <li ng-class="{'disabled':page*1>=post_list.page_count*1}">
+            <a ng-if="page*1>=post_list.page_count*1">&rsaquo;</a>
+            <a ng-if="page*1<post_list.page_count*1" ui-sref="post-list({page: page*1+1})">&rsaquo;</a>
+        </li>
+    </ul>
+</template>

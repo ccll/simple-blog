@@ -1,0 +1,64 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1082" measuredH="800" mockupW="960" mockupH="800">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="122" y="0" w="960" h="800" measuredW="960" measuredH="800" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/browser.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Component" x="122" y="70" w="960" h="40" measuredW="960" measuredH="40" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C83.5%2C81%2C96.5%22%20href%3D%22post-list-admin.bmml%22%20alt%3D%22post-list-admin%22%20id%3D%222%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C83.5%2C81%2C96.5%22%20href%3D%22post-list-admin.bmml%22%20alt%3D%22post-list-admin%22%20id%3D%222%22/%3E%0A</map>
+        <override controlID="2">
+          <hrefs>post-list-admin%26bm%3Bpost-list-admin.bmml%26bm%3Bpost-list-admin.bmml%26bm%3Bpost-list-admin.bmml%2C</hrefs>
+          <text>blog.ccll.im%2C%20editing</text>
+        </override>
+        <src>./assets/header.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TagCloud" x="158" y="137" w="183" h="282" measuredW="350" measuredH="110" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u6240%u6709%20Meteor%20AngularJS%20C++%20Python%20%u524D%u7AEF%20web</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TextInput" x="419" y="147" w="-1" h="-1" measuredW="108" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Meteor%u73AF%u5883%u642D%u5EFA</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="383" y="150" w="-1" h="-1" measuredW="23" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>title</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="383" y="184" w="-1" h="-1" measuredW="27" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>tags</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="419" y="181" w="-1" h="-1" measuredW="85" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Meteor%2C%20web</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TextArea" x="382" y="223" w="652" h="283" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>At%20vero%20eos%20et%20accusamus%20et%20iusto%20odio%20dignissimos%20ducimus%20qui%20blanditiis%20praesentium%20voluptatum%20deleniti%20atque%20corrupti%20quos%20dolores%20et%20quas%20molestias%20excepturi%20sint%20occaecati%20cupiditate%20non%20provident%2C%20similique%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollitia%20animi%2C%20id%20est%20laborum.%0A%20%0AOfficia%20deserunt%20mollitia%20animi%2C%20id%20est%20laborum%20et%20dolorum%20fuga.%20Et%20harum%20quidem%20rerum%20facilis%20est%20et%20expedita%20distinctio%20lorem%20ipsum%20dolor%20sit%20amet%2C%20mollitia%20animi%2C%20id%20est%20laborum%20et%20dolorum%20fug%20consectetur%20adipiscing%20elit.%20Ut%20non%20libero%20consectetur%20adipiscing%20elit%20magna.%20Sed%20et%20quam%20lacus.%20Fusce%20condimentum%20eleifend%20enim%20a%20feugiat.%20Pellentesque%20viverra%20vehicula%20sem%20ut%20volutpat.%20Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Ut%20non%20libero%20magna.%20Sed%20et%20quam%20lacus.%20Fusce%20condimentum%20eleifend.%0A%20%0AFusce%20condimentum%20eleifend%20enim%20a%20feugiat.%20Pellentesque%20viverra%20vehicula%20sem%20ut%20volutpat.%20Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Ut%20non%20libero%20magna.%20Sed%20et%20quam%20lacus.%20Fusce%20condimentum</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="415" y="535" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Preview</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Button" x="568" y="535" w="-1" h="-1" measuredW="52" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="646" y="535" w="-1" h="-1" measuredW="64" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
