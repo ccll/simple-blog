@@ -1,19 +1,12 @@
 <template name="posts">
 
     <div ng-show="!err" ng-cloak>
-
-        <div ng-show="loading_posts">
-            {{> spinner-icon}}
+        <div>
+            {{> post-table}}
         </div>
 
-        <div ng-show="!loading_posts">
-            <div>
-                {{> post-table}}
-            </div>
-
-            <div>
-                {{> post-pagination}}
-            </div>
+        <div ng-show="post_list.page_count > 1">
+            {{> post-pagination}}
         </div>
     </div>
 

@@ -3,11 +3,7 @@
 
 declare var Meteor;
 declare var Math;
-
-function page_count(): number {
-    var per_page = config.posts_per_page;
-    return Math.floor((Posts.find().count() + per_page - 1) / per_page);
-}
+declare var console;
 
 Meteor.methods({
 
@@ -22,20 +18,23 @@ Meteor.methods({
             throw new Meteor.Error(400, '无效的page');
         }
 
-        var per_page = config.posts_per_page;
-        var page_count = Math.floor((Posts.find().count() + per_page - 1) / per_page);
-
-        if (page > page_count) {
-            throw new Meteor.Error(400, '无效的page');
-        }
-
+        // Tags.
         var tags = Posts.distinct('tags');
 
+        // Posts.
         var query = tag ? {tags: tag} : {};
         var limit = config.posts_per_page;
         var offset = limit * (page-1);
         var posts = Posts.find(query,
             {sort: {created_at:-1}, skip:offset, limit: limit}).fetch();
+
+        // Total pages.
+        var per_page = config.posts_per_page;
+        var page_count = Math.floor((Posts.count(query) + per_page - 1) / per_page);
+
+        if (page > page_count) {
+            throw new Meteor.Error(400, '无效的page');
+        }
 
         return <PostList>{
             page_count: page_count,

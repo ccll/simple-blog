@@ -16,9 +16,14 @@
 
 <template name="tag-list">
     <div class="list-group">
+        <a ui-sref="post-list({tag:null, page:null})"
+           class="list-group-item" ng-class="{'active':!tag}"
+                >
+            所有
+        </a>
         <a ng-repeat="t in post_list.tags"
-           ui-sref="post-list({tag:encodeURIComponent(t)})"
-           class="list-group-item" ng-class="{active:t==tag}"
+           ui-sref="post-list({tag:encodeURIComponent(t), page:null})"
+           class="list-group-item" ng-class="{'active':t==tag}"
                 >
             [[ t ]]
         </a>

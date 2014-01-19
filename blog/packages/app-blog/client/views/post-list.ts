@@ -8,26 +8,18 @@ declare var Deps;
 declare var decodeURIComponent;
 declare var _;
 declare var console;
+declare var Error;
 
-ngMeteor.controller('PostListCtrl', ['$scope', '$state', '$stateParams', '$collection',
-    function ($scope, $state, $stateParams, $collection) {
+ngMeteor.controller('PostListCtrl', ['$scope', '$state', '$stateParams', 'data',
+    function ($scope, $state, $stateParams, data) {
 
-        // Query post list.
-        $scope.loading_posts = true;
-        $scope.tag = decodeURIComponent($stateParams.tag) || '';
-        $scope.page = $stateParams.page || 1;
-        Meteor.call('post_list', $scope.tag, $scope.page, function(err, post_list) {
-            $scope.safeApply(function() {
-                $scope.loading_posts = false;
-
-                if (err) {
-                    $scope.err = err;
-                    return;
-                }
-
-                $scope.post_list = post_list;
-            });
-        });
+        if (data.err) {
+            $scope.err = data.err;
+        } else {
+            $scope.tag = data.tag;
+            $scope.page = data.page;
+            $scope.post_list = data.post_list;
+        }
 
         // Format post date to human readable string.
         $scope.format_date = function(ms:number):string {
