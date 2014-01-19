@@ -3,9 +3,6 @@
     "typescript-compiler": {
       "version": "0.7.7.2"
     },
-    "angular-ui-router": {
-      "version": "0.1.3"
-    },
     "observatory": {
       "version": "0.3.21"
     },
@@ -23,6 +20,12 @@
     },
     "mongo-ext": {
       "version": "0.1.0"
+    },
+    "iron-router": {
+      "version": "0.6.2"
+    },
+    "angular-ui-router": {
+        "version": "0.1.4"
     }
   }
 }

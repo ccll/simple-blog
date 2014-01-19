@@ -5,9 +5,6 @@
       "typescript-compiler": {
         "version": "0.7.7.2"
       },
-      "angular-ui-router": {
-        "version": "0.1.3"
-      },
       "observatory": {
         "version": "0.3.21"
       },
@@ -25,6 +22,12 @@
       },
       "mongo-ext": {
         "version": "0.1.0"
+      },
+      "iron-router": {
+        "version": "0.6.2"
+      },
+      "angular-ui-router": {
+        "version": "0.1.4"
       }
     },
     "packages": {
@@ -32,11 +35,6 @@
         "git": "https://github.com/orefalo/meteor-typescript-compiler.git",
         "tag": "v0.7.7.2",
         "commit": "2c1525e95f1f061674951fc7c807f77295b66fc6"
-      },
-      "angular-ui-router": {
-        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
-        "tag": "v0.1.3",
-        "commit": "da0cb6184ff27ae238c40aa4cf8bff97aa9d26aa"
       },
       "observatory": {
         "git": "https://github.com/jhoxray/observatory.git",
@@ -68,15 +66,25 @@
         "tag": "v0.1.0",
         "commit": "05c47d5233bbc6e67e35d535e55e6fb4a1b8b6a2"
       },
-      "ngMeteor": {
-        "git": "https://github.com/loneleeandroo/ngMeteor.git",
-        "branch": "master",
-        "commit": "e4090391e9c6238ccf68788cd624402a48ac4248"
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.6.2",
+        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+      },
+      "angular-ui-router": {
+        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
+        "tag": "v0.1.4",
+        "commit": "2c1e77a40e59bca6e72cc5a9eb8b4e265c28feb9"
       },
       "observatory-apollo": {
         "git": "https://github.com/superstringsoftware/observatory-apollo.git",
         "tag": "v0.3.2",
         "commit": "f704848187a4da2bd179864ae80a1f73a3fd22a6"
+      },
+      "ngMeteor": {
+        "git": "https://github.com/loneleeandroo/ngMeteor.git",
+        "tag": "v0.1.0",
+        "commit": "fb9fc720f8930e414322dc92c2242c67948a7897"
       },
       "observatory-galileo": {
         "git": "https://github.com/superstringsoftware/observatory-galileo.git",

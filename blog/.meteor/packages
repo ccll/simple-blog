@@ -7,3 +7,9 @@ standard-app-packages
 preserve-inputs
 typescript-compiler
 app-blog
+<<<<<<< master
+=======
+iron-router
+angular-ui-router
+>>>>>>> local
+ngMeteor
