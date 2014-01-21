@@ -1,11 +1,11 @@
 <template name="posts">
 
-    <div ng-show="!err" ng-cloak>
+    <div ng-show="!err">
         <div>
             {{> post-table}}
         </div>
 
-        <div ng-show="post_list.page_count > 1">
+        <div ng-show="post_list.page_count > 1" class="text-center">
             {{> post-pagination}}
         </div>
     </div>

@@ -1,20 +1,4 @@
 <template name="tags">
-    <div class="panel panel-info">
-
-        <div class="panel-heading">
-            Tags
-        </div>
-
-        <div class="panel-body" ng-cloak>
-            {{> tag-list}}
-            <!--<div ng-template="tag-list"></div>-->
-        </div>
-
-    </div>
-</template>
-
-
-<template name="tag-list">
     <div class="list-group">
         <a ui-sref="post-list({tag:null, page:null})"
            class="list-group-item" ng-class="{'active':!tag}"
@@ -29,3 +13,4 @@
         </a>
     </div>
 </template>
+
