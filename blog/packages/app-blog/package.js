@@ -16,6 +16,7 @@ Package.on_use(function (api, where) {
 
     // Client only.
     api.use('preserve-inputs', 'client');
+    api.use('accounts-ui', 'client');
     api.use('session', 'client');
     api.use('less', 'client');
     api.use('templating', 'client');
@@ -35,6 +36,7 @@ Package.on_use(function (api, where) {
 
     //-----------------------
     // Shared code.
+    api.add_files('shared/config.ts', ['client', 'server']);
     api.add_files('shared/models.ts', ['client', 'server']);
 
     //-----------------------
@@ -55,9 +57,14 @@ Package.on_use(function (api, where) {
     api.add_files('client/views/post-list.ts', 'client');
     api.add_files('client/views/post-detail.html', 'client');
     api.add_files('client/views/post-detail.ts', 'client');
+    api.add_files('client/views/login.html', 'client');
+    api.add_files('client/views/login.ts', 'client');
+    api.add_files('client/views/post-editor.html', 'client');
+    api.add_files('client/views/post-editor.ts', 'client');
     api.add_files('client/index.html', 'client');
 
     // Code.
+    api.add_files('client/config.ts', 'client');
     api.add_files('client/router.ts', 'client');
     api.add_files('client/global.ts', 'client');
     api.add_files('client/app.ts', 'client');

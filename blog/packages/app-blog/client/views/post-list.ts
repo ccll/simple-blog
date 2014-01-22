@@ -34,8 +34,8 @@ ngMeteor.factory('post_list', ['$q', '$rootScope',
 ]);
 
 
-ngMeteor.controller('PostListCtrl', ['$scope', '$state', '$stateParams', 'data',
-    function ($scope, $state, $stateParams, data) {
+ngMeteor.controller('PostListCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 'data',
+    function ($scope, $rootScope, $state, $stateParams, data) {
 
         _.extend($scope, data);
 

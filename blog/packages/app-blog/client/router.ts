@@ -12,23 +12,39 @@ ngMeteor.config(['$stateProvider', '$urlRouterProvider',
             url: "/?tag&page",
             template: Template['post-list'],
             resolve: {
-                data: ['post_list', '$stateParams', function(post_list, $stateParams) {
+                data: ['post_list', '$stateParams', function (post_list, $stateParams) {
                     return post_list.get($stateParams);
                 }]
             },
             controller: 'PostListCtrl'
         });
 
-        $stateProvider
-            .state('post-detail', {
-                url: "/post/:id",
-                template: Template['post-detail'],
-                resolve: {
-                    data: ['post', '$stateParams', function(post, $stateParams) {
-                        return post.get($stateParams.id);
-                    }]
-                },
-                controller: 'PostDetailCtrl'
-            });
+        $stateProvider.state('post-detail', {
+            url: "/post/:id",
+            template: Template['post-detail'],
+            resolve: {
+                data: ['post', '$stateParams', function (post, $stateParams) {
+                    return post.get($stateParams.id);
+                }]
+            },
+            controller: 'PostDetailCtrl'
+        });
+
+        $stateProvider.state('login', {
+            url: "/login",
+            template: Template['login'],
+            controller: 'LoginCtrl'
+        });
+
+        $stateProvider.state('post-editor', {
+            url: "/edit/:id",
+            template: Template['post-editor'],
+            resolve: {
+                data: ['post', '$stateParams', function (post, $stateParams) {
+                    return post.get($stateParams.id);
+                }]
+            },
+            controller: 'PostEditorCtrl'
+        });
     }
 ]);

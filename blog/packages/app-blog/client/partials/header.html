@@ -2,9 +2,17 @@
     <div class="header-bg">
         <div class="container header-bar">
             <div class="row">
-                <ul class="breadcrumb">
-                    <li><a ui-sref="post-list"><i class="fa fa-home fa-lg"></i></a></li>
-                </ul>
+
+                <div class="pull-left">
+                    <ul class="breadcrumb">
+                        <li><a ui-sref="post-list"><i class="fa fa-home fa-lg"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="pull-right" ng-show="login || $user">
+                    {{loginButtons align="right"}}
+                </div>
+
             </div>
         </div>
     </div>
