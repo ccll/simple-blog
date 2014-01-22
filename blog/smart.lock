@@ -28,9 +28,6 @@
       },
       "angular-ui-router": {
         "version": "0.1.4"
-      },
-      "marked": {
-        "version": "0.2.9"
       }
     },
     "packages": {
@@ -78,11 +75,6 @@
         "git": "https://github.com/ccll/meteor-angular-ui-router.git",
         "tag": "v0.1.4",
         "commit": "2c1e77a40e59bca6e72cc5a9eb8b4e265c28feb9"
-      },
-      "marked": {
-        "git": "https://github.com/chuangbo/meteor-marked.git",
-        "tag": "v0.2.9",
-        "commit": "6485d6f03841501f81176e34ab375840473aa714"
       },
       "observatory-apollo": {
         "git": "https://github.com/superstringsoftware/observatory-apollo.git",

@@ -26,9 +26,6 @@
     },
     "angular-ui-router": {
       "version": "0.1.4"
-    },
-    "marked": {
-      "version": "0.2.9"
     }
   }
 }

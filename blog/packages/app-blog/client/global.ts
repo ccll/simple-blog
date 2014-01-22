@@ -6,6 +6,20 @@ declare var alert;
 declare var encodeURIComponent;
 declare var Date;
 declare var Deps;
+declare var navigator;
+
+function find_out_os(): string {
+    if (navigator.appVersion.indexOf("Win")!=-1)
+        return "windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1)
+        return "macos";
+    if (navigator.appVersion.indexOf("Linux")!=-1)
+        return "linux";
+    if (navigator.appVersion.indexOf("X11")!=-1)
+        return "unix";
+
+    return "unknown";
+}
 
 // 设置全局可以访问的对象和数据
 ngMeteor.run(['$rootScope', '$state', '$stateParams',
@@ -33,5 +47,7 @@ ngMeteor.run(['$rootScope', '$state', '$stateParams',
             });
         });
 
+        // Find out OS.
+        $rootScope.os = find_out_os();
     }
 ]);
