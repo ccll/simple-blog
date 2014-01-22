@@ -1,0 +1,24 @@
+<template name="post-detail">
+    <div class="container">
+
+        <br />
+
+        <div class="row">
+
+            <h2>[[ post.title ]]</h2>
+
+            <h5>[[ format_date(post.created_at) ]]</h5>
+
+            <ul class="list-inline">
+                <li ng-repeat="t in post.tags">
+                    <a href="#" ui-sref="post-list({tag: encodeURIComponent(t)})">[[ t ]]</a>
+                </li>
+            </ul>
+
+            <br />
+
+            <div>[[ post.content ]]</div>
+
+        </div>
+    </div>
+</template>

@@ -3,6 +3,7 @@ declare var window;
 declare var console;
 declare var alert;
 declare var encodeURIComponent;
+declare var Date;
 
 // 设置全局可以访问的对象和数据
 ngMeteor.run(['$rootScope', '$state', '$stateParams',
@@ -18,7 +19,10 @@ ngMeteor.run(['$rootScope', '$state', '$stateParams',
         $rootScope.alert = alert;
         $rootScope.encodeURIComponent = encodeURIComponent;
 
-        // Tags.
+        // Format post date to human readable string.
+        $rootScope.format_date = function(ms:number):string {
+            return new Date(ms).toLocaleString();
+        };
 
     }
 ]);

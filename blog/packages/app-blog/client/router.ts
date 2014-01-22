@@ -22,7 +22,13 @@ ngMeteor.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider
             .state('post-detail', {
                 url: "/post/:id",
-                template: Template['post-detail']
+                template: Template['post-detail'],
+                resolve: {
+                    data: ['post', '$stateParams', function(post, $stateParams) {
+                        return post.get($stateParams.id);
+                    }]
+                },
+                controller: 'PostDetailCtrl'
             });
     }
 ]);

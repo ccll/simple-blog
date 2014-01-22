@@ -3,12 +3,18 @@
 
 declare var Meteor;
 declare var Math;
+declare var check;
+declare var String;
+declare var Number;
 declare var console;
 
 Meteor.methods({
 
     // Get post list.
     post_list: function(tag:string, page:number): PostList {
+        check(tag, String);
+        check(page, Number);
+
         if (page < 1) {
             throw new Meteor.Error(400, '无效的page');
         }
@@ -36,6 +42,14 @@ Meteor.methods({
             tags: tags,
             posts: posts
         };
+    },
+
+
+    // Get post.
+    post: function(post_id:string): Post {
+        check(post_id, String);
+
+        return Posts.findOne({_id: post_id});
     }
 
 });
