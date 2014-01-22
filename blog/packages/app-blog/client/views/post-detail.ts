@@ -27,7 +27,7 @@ ngMeteor.factory('post', ['$q', '$rootScope',
         return {
             get: function (post_id:string):Post {
                 var defer = $q.defer();
-                Meteor.call('post', post_id, function (err, post) {
+                Meteor.call('get_post', post_id, function (err, post) {
                     $rootScope.safeApply(function () {
                         if (err) {
                             defer.resolve({err: err});

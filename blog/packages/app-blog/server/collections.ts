@@ -26,9 +26,13 @@ Meteor.startup(function() {
                     '|shit| fuck |\n' +
                     '| fuck | shit|\n',
                 tags: tags,
-                created_at: when.getTime()
+                created_at: when.getTime(),
+
+                published: (i % 2) !== 0,
+                draft: 'this is a draft'
             };
             Posts.insert(p);
         }
+    } else {
     }
 });

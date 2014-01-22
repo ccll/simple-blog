@@ -18,7 +18,7 @@ ngMeteor.factory('post_list', ['$q', '$rootScope',
                 var page = parseInt(stateParams.page) || 1;
 
                 var defer = $q.defer();
-                Meteor.call('post_list', tag, page, function(err, post_list) {
+                Meteor.call('get_post_list', tag, page, function(err, post_list) {
                     $rootScope.$apply(function() {
                         if (err) {
                             defer.resolve({err: err});

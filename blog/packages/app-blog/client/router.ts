@@ -3,6 +3,7 @@ declare var Meteor;
 declare var ngMeteor;
 declare var Template;
 declare var decodeURIComponent;
+declare var Random;
 
 ngMeteor.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
@@ -41,7 +42,14 @@ ngMeteor.config(['$stateProvider', '$urlRouterProvider',
             template: Template['post-editor'],
             resolve: {
                 data: ['post', '$stateParams', function (post, $stateParams) {
-                    return post.get($stateParams.id);
+                    if ($stateParams.id) {
+                        // Read post from server.
+                        return post.get($stateParams.id);
+                    } else {
+                        // Generate a empty post with a new random id.
+                        $stateParams.id = Random.id();
+                        return {post:{_id: $stateParams.id}};
+                    }
                 }]
             },
             controller: 'PostEditorCtrl'

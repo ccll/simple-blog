@@ -11,7 +11,7 @@ declare var console;
 Meteor.methods({
 
     // Get post list.
-    post_list: function(tag:string, page:number): PostList {
+    get_post_list: function(tag:string, page:number): PostList {
         check(tag, String);
         check(page, Number);
 
@@ -46,10 +46,16 @@ Meteor.methods({
 
 
     // Get post.
-    post: function(post_id:string): Post {
+    get_post: function(post_id:string): Post {
         check(post_id, String);
 
         return Posts.findOne({_id: post_id});
+    },
+
+    // Save draft.
+    save_draft: function(post_id:string, post_content:string) {
+        check(post_id, String);
+        check(post_content, String);
     }
 
 });

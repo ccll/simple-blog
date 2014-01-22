@@ -1,11 +1,12 @@
 declare var ngMeteor;
+declare var Meteor;
 declare var _;
 declare var marked;
 declare var console;
 declare var navigator;
 
-ngMeteor.controller('PostEditorCtrl', ['$scope', 'data',
-    function($scope, data) {
+ngMeteor.controller('PostEditorCtrl', ['$scope', '$stateParams', 'data',
+    function($scope, $stateParams, data) {
 
         // Import all data.
         _.extend($scope, data);
@@ -22,7 +23,11 @@ ngMeteor.controller('PostEditorCtrl', ['$scope', 'data',
                 if (($scope.os === 'windows' && ev.ctrlKey)
                     || ($scope.os === 'macos' && ev.metaKey)) {
                     ev.preventDefault();
-                    // TODO: save draft.
+
+                    Meteor.call('save_draft', $stateParams.id, $scope.post.content,
+                        function(err, result) {
+                        }
+                    );
                 }
             }
         }
