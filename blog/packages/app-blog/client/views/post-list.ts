@@ -8,13 +8,14 @@ declare var decodeURIComponent;
 declare var _;
 declare var console;
 declare var Error;
+declare var parseInt;
 
 ngMeteor.factory('post_list', ['$q', '$rootScope',
     function($q, $rootScope) {
         return {
             get: function(stateParams) {
                 var tag = stateParams.tag ? decodeURIComponent(stateParams.tag) : '';
-                var page = stateParams.page || 1;
+                var page = parseInt(stateParams.page) || 1;
 
                 var defer = $q.defer();
                 Meteor.call('post_list', tag, page, function(err, post_list) {

@@ -23,6 +23,7 @@ Package.on_use(function (api, where) {
     api.use('bootswatch-yeti', 'client');
     api.use('ngMeteor', 'client');
     api.use('angular-ui-router', 'client');
+    api.use('marked', 'client');
 
     // Server only.
     api.use('email', 'server');

@@ -18,7 +18,13 @@ Meteor.startup(function() {
 
             var p = <Post>{
                 title: 'Meteor开发指南(' + (i+1) + ')',
-                content: 'Hello, Meteor!',
+                content:
+                    '## Hello, Meteor!\n' +
+                    '---\n' +
+                    '| title | value |\n' +
+                    '|-------|------:|\n' +
+                    '|shit| fuck |\n' +
+                    '| fuck | shit|\n',
                 tags: tags,
                 created_at: when.getTime()
             };

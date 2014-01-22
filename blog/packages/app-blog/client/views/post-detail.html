@@ -5,19 +5,23 @@
 
         <div class="row">
 
-            <h2>[[ post.title ]]</h2>
+            <div class="col-sm-12">
 
-            <h5>[[ format_date(post.created_at) ]]</h5>
+                <h2>[[ post.title ]]</h2>
 
-            <ul class="list-inline">
-                <li ng-repeat="t in post.tags">
-                    <a href="#" ui-sref="post-list({tag: encodeURIComponent(t)})">[[ t ]]</a>
-                </li>
-            </ul>
+                <h5>[[ format_date(post.created_at) ]]</h5>
 
-            <br />
+                <ul class="list-inline">
+                    <li ng-repeat="t in post.tags">
+                        <a href="#" ui-sref="post-list({tag: encodeURIComponent(t)})">[[ t ]]</a>
+                    </li>
+                </ul>
 
-            <div>[[ post.content ]]</div>
+                <br />
+
+                <div markdown="post.content"></div>
+
+            </div>
 
         </div>
     </div>
