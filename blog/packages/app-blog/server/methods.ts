@@ -7,11 +7,6 @@ declare var console;
 
 Meteor.methods({
 
-    // Get all tags.
-    get_all_tags: function(): string[] {
-
-    },
-
     // Get post list.
     post_list: function(tag:string, page:number): PostList {
         if (page < 1) {
