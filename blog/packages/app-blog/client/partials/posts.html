@@ -1,11 +1,6 @@
 <template name="posts">
 
     <div ng-show="!err">
-        <div ng-show="$user">
-            <a ui-sref="post-editor" class="btn btn-info">New blog</a>
-            <p />
-        </div>
-
         <div>
             {{> post-table}}
         </div>

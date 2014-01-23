@@ -7,6 +7,7 @@ declare var encodeURIComponent;
 declare var Date;
 declare var Deps;
 declare var navigator;
+declare var Random;
 
 function find_out_os(): string {
     if (navigator.appVersion.indexOf("Win")!=-1)
@@ -49,5 +50,10 @@ ngMeteor.run(['$rootScope', '$state', '$stateParams',
 
         // Find out OS.
         $rootScope.os = find_out_os();
+
+        // Generate random id.
+        $rootScope.random_id = function(): string {
+            return Random.id();
+        };
     }
 ]);

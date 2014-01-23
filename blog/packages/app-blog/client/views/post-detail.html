@@ -11,10 +11,6 @@
                     <div class="pull-left">
                         <h2>[[ post.title ]]</h2>
                     </div>
-
-                    <div class="pull-right" ng-show="$user">
-                        <a ui-sref="post-editor({id:post._id})" class="btn btn-info">Edit</a>
-                    </div>
                 </div>
 
                 <h5>[[ format_date(post.created_at) ]]</h5>

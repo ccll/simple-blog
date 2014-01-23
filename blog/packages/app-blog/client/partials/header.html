@@ -1,19 +1,32 @@
 <template name="header">
-    <div class="header-bg">
-        <div class="container header-bar">
-            <div class="row">
+    <div class="navbar navbar-inverse">
+        <div class="container">
 
-                <div class="pull-left">
-                    <ul class="breadcrumb">
-                        <li><a ui-sref="post-list"><i class="fa fa-home fa-lg"></i></a></li>
+            <div>
+
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="post-list"><i class="fa fa-home fa-lg"></i></a>
+                </div>
+
+                <div class="navbar-collapse collapse navbar-inverse-collapse col-sm-offset-2">
+                    <ul ng-switch="$state.current.name" class="nav navbar-nav navbar-left" ng-show="$user">
+
+                        <li ng-if="$state.is('post-list')"><a ui-sref="post-editor">New</a></li>
+
+                        <li ng-if="$state.is('post-detail')"><a ui-sref="post-editor({id:$stateParams.id})">Edit</a></li>
+
+                        <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="save_as_draft()">Save as draft</a></li>
+                        <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="publish()">Publish</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" ng-show="login || $user">
+                        {{loginButtons align="right"}}
                     </ul>
                 </div>
 
-                <div class="pull-right" ng-show="login || $user">
-                    {{loginButtons align="right"}}
-                </div>
-
             </div>
+
         </div>
     </div>
 </template>
