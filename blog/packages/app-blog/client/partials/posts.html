@@ -11,7 +11,7 @@
     </div>
 
     <div ng-show="err">
-        [[ err.reason ]]
+        [[err.reason]]
     </div>
 
 </template>
@@ -19,9 +19,14 @@
 
 <template name="post-table">
     <div class="list-group">
-        <a ng-repeat="p in post_list.posts" ui-sref="post-detail({id:p._id})" class="list-group-item">
-            <span class="text-140percent">[[ p.title ]]</span>
-            <span class="pull-right">[[ format_date(p.created_at) ]]</span>
+        <a ng-repeat="p in post_list.posts"
+            ui-sref="post-detail({id:p._id})"
+            class="list-group-item block">
+                <div class="text-140percent margin-bottom-10">[[p.title]]</div>
+                <div class="row no-compensation color-grey">
+                    <div class="pull-left"><i class="fa fa-calendar fa-fw"></i> [[format_date(p.created_at)]]</div>
+                    <div class="pull-right"><i class="fa fa-comments fa-fw"></i> 32个回复</div>
+                </div>
         </a>
     </div>
 </template>
@@ -29,12 +34,12 @@
 
 <template name="post-pagination">
     <ul class="pagination">
-        <li ng-class="{'disabled':page*1<=1*1}">
+        <li ng-class="{'disabled':page*1<=1}">
             <a ng-if="page*1<=1">&lsaquo;</a>
             <a ng-if="page*1>1" ui-sref="post-list({page: page*1-1})">&lsaquo;</a>
         </li>
         <li ng-repeat="pno in [1, post_list.page_count] | range" ng-class="{active:pno*1==page*1}">
-            <a ui-sref="post-list({page:pno})">[[ pno ]]</a>
+            <a ui-sref="post-list({page:pno})">[[pno]]</a>
         </li>
         <li ng-class="{'disabled':page*1>=post_list.page_count*1}">
             <a ng-if="page*1>=post_list.page_count*1">&rsaquo;</a>

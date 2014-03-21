@@ -12,9 +12,12 @@ declare var alert;
 declare var window;
 declare var parseInt;
 declare var Angularite;
+declare var Spiderable;
 
 var App = Angularite.module('blogApp', ['ui.router']);
 this.App = App;
+
+Spiderable.makeSpiderable(App);
 
 // Avoid `console` errors in browsers that lack a console.
 if (!(window.console && console.log)) {

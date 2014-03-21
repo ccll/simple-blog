@@ -15,8 +15,8 @@ App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             url: "/?tag&page",
             template: Template['post-list'],
             resolve: {
-                data: ['post_list', '$stateParams', function (post_list, $stateParams) {
-                    return post_list.get($stateParams);
+                data: ['$postList', '$stateParams', function ($postList, $stateParams) {
+                    return $postList.get($stateParams);
                 }]
             },
             controller: 'PostListCtrl'

@@ -19,7 +19,7 @@ Meteor.methods({
             throw new Meteor.Error(400, '无效的page');
         }
 
-        // Tags.
+        // Collect all tags.
         var tags = Posts.distinct('tags');
 
         // Posts.
@@ -45,7 +45,7 @@ Meteor.methods({
     },
 
 
-    // Get post.
+    // Get a single post.
     get_post: function(post_id:string): Post {
         check(post_id, String);
 

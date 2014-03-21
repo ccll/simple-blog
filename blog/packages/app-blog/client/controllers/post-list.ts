@@ -10,7 +10,7 @@ declare var console;
 declare var Error;
 declare var parseInt;
 
-App.factory('post_list', ['$q', '$rootScope',
+App.factory('$postList', ['$q', '$rootScope',
     function($q, $rootScope) {
         return {
             get: function(stateParams) {
