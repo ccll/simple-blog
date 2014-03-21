@@ -6,6 +6,10 @@
   display: inline-block;
 }
 
+.header {
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+}
+
 .header-bg {
   background-color: @header-bg-color;
   height: @header-height;
@@ -236,19 +240,6 @@
   }
 }
 
-.post-list {
-
-}
-
-.post-item {
-  text-decoration: none;
-  border: 1px solid deepskyblue;
-
-  h3 {
-
-  }
-}
-
 .bfc {
   overflow: hidden;
 }
@@ -306,6 +297,7 @@
 
 .tag {
   border-radius: 4px;
+  font-family: "Hiragino Mincho Pro", serif;
 
   a {
     padding: 2px 4px !important;
@@ -322,7 +314,7 @@
 }
 
 .tag:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #eee;
 }
 
 .color-grey {
@@ -337,4 +329,38 @@
   margin-right: 0;
   margin-left: 0;
 
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.post-list {
+
+}
+
+.post-item {
+  padding: 10px 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.post-item:hover,
+.post-item:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.post-list .post-item:first-child {
+  border-top: 1px dashed #ccc;
+}
+
+.post-list .post-item:last-child {
+  // border-bottom: none;
+}
+
+.post-item .title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 6px;
 }

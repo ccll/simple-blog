@@ -18,11 +18,11 @@
 
 
 <template name="post-table">
-    <div class="list-group">
+    <div class="post-list">
         <a ng-repeat="p in post_list.posts"
             ui-sref="post-detail({id:p._id})"
-            class="list-group-item block">
-                <div class="text-140percent margin-bottom-10">[[p.title]]</div>
+            class="block post-item clickable-text">
+                <div class="text-140percent title">[[p.title]]</div>
                 <div class="row no-compensation color-grey">
                     <div class="pull-left"><i class="fa fa-calendar fa-fw"></i> [[format_date(p.created_at)]]</div>
                     <div class="pull-right"><i class="fa fa-comments fa-fw"></i> 32个回复</div>

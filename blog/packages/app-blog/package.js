@@ -52,6 +52,7 @@ Package.on_use(function (api, where) {
     // Partials.
     api.add_files('client/partials/icons.html', 'client');
     api.add_files('client/partials/header.html', 'client');
+    api.add_files('client/partials/footer.html', 'client');
     api.add_files('client/partials/tags.html', 'client');
     api.add_files('client/partials/posts.html', 'client');
 

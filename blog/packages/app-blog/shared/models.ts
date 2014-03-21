@@ -5,6 +5,7 @@ class Post {
     content: string;
     tags: string[];
     created_at: number; // milliseconds from 1970
+    updated_at: number;
 
     published: boolean;
     draft: string;
