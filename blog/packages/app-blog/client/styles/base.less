@@ -60,9 +60,18 @@
   padding-left: 30px;
 }
 
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
 .clickable-text {
   text-decoration: none !important;
   cursor: pointer !important;
+  display: block;
+}
+
+.clickable-text:hover {
+  color: #008cba;
 }
 
 .text-size-14px label,a {
@@ -295,4 +304,23 @@
   cursor: pointer;
 }
 
+.tag {
+  border-radius: 4px;
 
+  a {
+    padding: 2px 4px !important;
+    margin: 3px 0;
+  }
+}
+
+.tag.active {
+  background-color: #39b3d7;
+
+  a {
+    color: white;
+  }
+}
+
+.tag:hover:not(.active) {
+  background-color: #ddd;
+}

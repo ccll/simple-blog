@@ -1,16 +1,25 @@
 <template name="tags">
-    <div class="list-group">
-        <a ui-sref="post-list({tag:null, page:null})"
-           class="list-group-item" ng-class="{'active':!tag}"
-                >
-            所有
-        </a>
-        <a ng-repeat="t in post_list.tags"
-           ui-sref="post-list({tag:encodeURIComponent(t), page:null})"
-           class="list-group-item" ng-class="{'active':t==tag}"
-                >
-            [[ t ]]
-        </a>
-    </div>
+    <ul class="list-unstyled">
+
+        <!-- View all posts -->
+        <li ng-class="{'active':!tag}" class="tag">
+            <a ui-sref="post-list({tag:null, page:null})"
+                class="clickable-text">
+                    <i class="fa fa-bars fa-fw"></i>
+                    所有
+            </a>
+        </li>
+
+        <!-- View specific tag -->
+        <li ng-repeat="t in post_list.tags"
+            ng-class="{'active':t==tag}"
+            class="tag">
+            <a ui-sref="post-list({tag:encodeURIComponent(t), page:null})"
+                class="clickable-text">
+                    <i class="fa fa-tags fa-fw"></i>
+                    [[ t ]]
+            </a>
+        </li>
+    </ul>
 </template>
 
