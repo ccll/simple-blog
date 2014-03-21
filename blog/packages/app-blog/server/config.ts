@@ -3,13 +3,13 @@ declare var Accounts;
 declare var Meteor;
 
 // Security.
-BrowserPolicy.framing.disallow();
-BrowserPolicy.content.disallowInlineScripts();
+// BrowserPolicy.framing.disallow();
+// BrowserPolicy.content.disallowInlineScripts();
 
-BrowserPolicy.content.allowSameOriginForAll();
+// BrowserPolicy.content.allowSameOriginForAll();
 
-BrowserPolicy.content.allowEval();
-BrowserPolicy.content.allowInlineStyles();
+// BrowserPolicy.content.allowEval();
+// BrowserPolicy.content.allowInlineStyles();
 
 
 // Config post list.

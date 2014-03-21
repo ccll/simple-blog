@@ -5,29 +5,30 @@
       "typescript-compiler": {
         "version": "0.7.7.2"
       },
-      "observatory": {
-        "version": "0.3.21"
-      },
-      "bootswatch-yeti": {
-        "version": "0.3.7"
-      },
-      "font-awesome-4": {
-        "version": "4.0.0"
-      },
-      "npm": {
-        "version": "0.2.6"
+      "angular-ui-router": {
+        "path": "../../../oss/mrt/angular-ui-router"
       },
       "underscore-string-latest": {
         "version": "2.3.3"
       },
+      "angular-bootstrap": {
+        "path": "../../../oss/mrt/angular-bootstrap"
+      },
+      "angularite": {
+        "path": "../../../oss/mrt/angularite"
+      },
+      "spiderable-ui-router": {
+        "path": "../../../oss/mrt/spiderable-ui-router"
+      },
       "mongo-ext": {
         "version": "0.1.0"
       },
-      "iron-router": {
-        "version": "0.6.2"
+      "bootswatch-yeti": {
+        "git": "https://github.com/ccll/meteor-bootswatch-yeti.git",
+        "branch": "master"
       },
-      "angular-ui-router": {
-        "version": "0.1.4"
+      "fontawesome4": {
+        "version": "1.0.0"
       }
     },
     "packages": {
@@ -36,60 +37,42 @@
         "tag": "v0.7.7.2",
         "commit": "2c1525e95f1f061674951fc7c807f77295b66fc6"
       },
-      "observatory": {
-        "git": "https://github.com/jhoxray/observatory.git",
-        "tag": "v0.3.21",
-        "commit": "3d6b436af0a70b784d0f9ec4709907c77bd4fd63"
-      },
-      "bootswatch-yeti": {
-        "git": "https://github.com/mikeschaekermann/meteor-bootswatch-yeti.git",
-        "tag": "v0.3.7",
-        "commit": "98871b27baa7e8c080bc59ab4c870b99ec271386"
-      },
-      "font-awesome-4": {
-        "git": "https://github.com/michaelbishop/meteor-font-awesome-4.git",
-        "tag": "v4.0.0",
-        "commit": "c28b5a0f2a2bd233c495642b40a167eda95172f5"
-      },
-      "npm": {
-        "git": "https://github.com/arunoda/meteor-npm.git",
-        "tag": "v0.2.6",
-        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      "angular-ui-router": {
+        "path": "../../../oss/mrt/angular-ui-router"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
         "tag": "v2.3.3",
         "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
       },
+      "angular-bootstrap": {
+        "path": "../../../oss/mrt/angular-bootstrap"
+      },
+      "angularite": {
+        "path": "../../../oss/mrt/angularite"
+      },
+      "spiderable-ui-router": {
+        "path": "../../../oss/mrt/spiderable-ui-router"
+      },
       "mongo-ext": {
         "git": "https://github.com/alethes/meteor-mongo-ext.git",
         "tag": "v0.1.0",
         "commit": "05c47d5233bbc6e67e35d535e55e6fb4a1b8b6a2"
       },
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.2",
-        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
-      },
-      "angular-ui-router": {
-        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
-        "tag": "v0.1.4",
-        "commit": "2c1e77a40e59bca6e72cc5a9eb8b4e265c28feb9"
-      },
-      "observatory-apollo": {
-        "git": "https://github.com/superstringsoftware/observatory-apollo.git",
-        "tag": "v0.3.2",
-        "commit": "f704848187a4da2bd179864ae80a1f73a3fd22a6"
-      },
-      "ngMeteor": {
-        "git": "https://github.com/loneleeandroo/ngMeteor.git",
-        "tag": "v0.1.0",
-        "commit": "fb9fc720f8930e414322dc92c2242c67948a7897"
-      },
-      "observatory-galileo": {
-        "git": "https://github.com/superstringsoftware/observatory-galileo.git",
+      "bootswatch-yeti": {
+        "git": "https://github.com/ccll/meteor-bootswatch-yeti.git",
         "branch": "master",
-        "commit": "f21b80e6502d38a7ce66206374b706f2cbd0228d"
+        "commit": "4a2a70107558d7dd2055bc3b44633e379d89bdd3"
+      },
+      "fontawesome4": {
+        "git": "https://github.com/chrismbeckett/meteor-fontawesome4.git",
+        "tag": "v1.0.0",
+        "commit": "fe38ec775e974f0f7855d1693dc74fd4f1b4848c"
+      },
+      "bower": {
+        "git": "https://github.com/mquandalle/meteor-bower.git",
+        "tag": "v0.1.2",
+        "commit": "780b841593c355d1522982e50e7a59fe35d33fee"
       }
     }
   }

@@ -3,29 +3,30 @@
     "typescript-compiler": {
       "version": "0.7.7.2"
     },
-    "observatory": {
-      "version": "0.3.21"
-    },
-    "bootswatch-yeti": {
-      "version": "0.3.7"
-    },
-    "font-awesome-4": {
-      "version": "4.0.0"
-    },
-    "npm": {
-      "version": "0.2.6"
+    "angular-ui-router": {
+      "path": "/Users/cailei/proj/oss/mrt/angular-ui-router"
     },
     "underscore-string-latest": {
       "version": "2.3.3"
     },
+    "angular-bootstrap": {
+      "path": "/Users/cailei/proj/oss/mrt/angular-bootstrap"
+    },
+    "angularite": {
+      "path": "/Users/cailei/proj/oss/mrt/angularite"
+    },
+    "spiderable-ui-router": {
+      "path": "/Users/cailei/proj/oss/mrt/spiderable-ui-router"
+    },
     "mongo-ext": {
       "version": "0.1.0"
     },
-    "iron-router": {
-      "version": "0.6.2"
+    "bootswatch-yeti": {
+      "git": "https://github.com/ccll/meteor-bootswatch-yeti.git",
+      "branch": "master"
     },
-    "angular-ui-router": {
-      "version": "0.1.4"
+    "fontawesome4": {
+      "version": "1.0.0"
     }
   }
 }

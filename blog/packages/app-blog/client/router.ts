@@ -1,12 +1,14 @@
 declare var console;
 declare var Meteor;
-declare var ngMeteor;
+declare var App;
 declare var Template;
 declare var decodeURIComponent;
 declare var Random;
 
-ngMeteor.config(['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider, $urlRouterProvider) {
+App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+    function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $locationProvider.html5Mode(true);
+
         $urlRouterProvider.otherwise("/");
 
         $stateProvider.state('post-list', {

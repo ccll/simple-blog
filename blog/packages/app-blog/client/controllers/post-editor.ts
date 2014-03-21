@@ -1,11 +1,11 @@
-declare var ngMeteor;
+declare var App;
 declare var Meteor;
 declare var _;
 declare var marked;
 declare var console;
 declare var navigator;
 
-ngMeteor.controller('PostEditorCtrl', ['$scope', '$stateParams', 'data',
+App.controller('PostEditorCtrl', ['$scope', '$stateParams', 'data',
     function($scope, $stateParams, data) {
 
         // Import all data.

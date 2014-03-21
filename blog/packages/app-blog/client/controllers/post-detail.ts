@@ -1,11 +1,11 @@
 /// <reference path='../../shared/models.ts' />
 
-declare var ngMeteor;
+declare var App;
 declare var Meteor;
 declare var _;
 declare var marked;
 
-ngMeteor.directive('markdown', function () {
+App.directive('markdown', function () {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {
@@ -22,7 +22,7 @@ ngMeteor.directive('markdown', function () {
     };
 });
 
-ngMeteor.factory('post', ['$q', '$rootScope',
+App.factory('post', ['$q', '$rootScope',
     function ($q, $rootScope) {
         return {
             get: function (post_id:string):Post {
@@ -42,7 +42,7 @@ ngMeteor.factory('post', ['$q', '$rootScope',
     }
 ]);
 
-ngMeteor.controller('PostDetailCtrl', ['$scope', 'data',
+App.controller('PostDetailCtrl', ['$scope', 'data',
     function ($scope, data) {
         _.extend($scope, data);
     }

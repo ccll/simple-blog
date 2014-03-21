@@ -1,6 +1,6 @@
-declare var ngMeteor;
+declare var App;
 
-ngMeteor.controller('LoginCtrl', ['$rootScope', '$state',
+App.controller('LoginCtrl', ['$rootScope', '$state',
     function($rootScope, $state) {
         $rootScope.login = true;
         $state.go('post-list');

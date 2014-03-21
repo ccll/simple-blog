@@ -1,5 +1,5 @@
 declare var Meteor;
-declare var ngMeteor;
+declare var App;
 declare var angular;
 declare var Session;
 declare var Deps;
@@ -11,6 +11,10 @@ declare var console;
 declare var alert;
 declare var window;
 declare var parseInt;
+declare var Angularite;
+
+var App = Angularite.module('blogApp', ['ui.router']);
+this.App = App;
 
 // Avoid `console` errors in browsers that lack a console.
 if (!(window.console && console.log)) {
@@ -26,7 +30,7 @@ if (!(window.console && console.log)) {
 }
 
 // $scope.safeApply()
-ngMeteor.config([
+App.config([
     '$provide', function ($provide) {
         return $provide.decorator('$rootScope', [
             '$delegate', function ($delegate) {
@@ -49,7 +53,7 @@ ngMeteor.config([
 
 // Hide $anchorScroll provider, to disable auto-scroll-back-to-top when you switch states.
 // Use $scrollTo() to scroll with animation, see 'providers.js'.
-ngMeteor.value('$anchorScroll', angular.noop);
+App.value('$anchorScroll', angular.noop);
 
 /** 将屏幕滚动到指定的element或offset **/
 var $ScrollToProvider = function() {
@@ -92,11 +96,11 @@ var $ScrollToProvider = function() {
         return wrapper;
     }];
 };
-ngMeteor.provider('$scrollTo', $ScrollToProvider);
+App.provider('$scrollTo', $ScrollToProvider);
 
 
 // Detect 'enter' press event.
-ngMeteor.directive('ngEnter', function () {
+App.directive('ngEnter', function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if(event.which === 13) {
@@ -112,7 +116,7 @@ ngMeteor.directive('ngEnter', function () {
 
 
 // range filter, usage: ... ng-repeat="n in [0, 10] | range" ...
-ngMeteor.filter('range', function() {
+App.filter('range', function() {
     return function(input) {
         var lowBound, highBound;
         switch (input.length) {
@@ -136,7 +140,7 @@ ngMeteor.filter('range', function() {
 
 
 
-ngMeteor.controller('MainCtrl', ['$scope', '$rootScope', '$state',
+App.controller('MainCtrl', ['$scope', '$rootScope', '$state',
     function ($scope, $rootScope, $state) {
 
     }

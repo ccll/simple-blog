@@ -1,4 +1,4 @@
-declare var ngMeteor;
+declare var App;
 declare var Meteor;
 declare var window;
 declare var console;
@@ -23,7 +23,7 @@ function find_out_os(): string {
 }
 
 // 设置全局可以访问的对象和数据
-ngMeteor.run(['$rootScope', '$state', '$stateParams',
+App.run(['$rootScope', '$state', '$stateParams',
     function ($rootScope, $state, $stateParams) {
         window.$rootScope = $rootScope;
 

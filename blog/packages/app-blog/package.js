@@ -13,6 +13,7 @@ Package.on_use(function (api, where) {
     api.use('accounts-password', ['client', 'server']);
     api.use('underscore-string-latest', ['client', 'server']);
     api.use('random', ['client', 'server']);
+    api.use('spiderable-ui-router', ['client', 'server']);
 
     // Client only.
     api.use('preserve-inputs', 'client');
@@ -20,14 +21,14 @@ Package.on_use(function (api, where) {
     api.use('session', 'client');
     api.use('less', 'client');
     api.use('templating', 'client');
-    api.use('font-awesome-4', 'client');
-    api.use('bootswatch-yeti', 'client');
-    api.use('ngMeteor', 'client');
+    api.use('angularite', 'client');
     api.use('angular-ui-router', 'client');
+    api.use('fontawesome4', 'client');
+    api.use('bootswatch-yeti', 'client');
 
     // Server only.
     api.use('email', 'server');
-    api.use('browser-policy', 'server');
+    // api.use('browser-policy', 'server');
     api.use('mongo-ext', 'server');
 
     //////////////////////////////////////////////////////////
@@ -41,6 +42,7 @@ Package.on_use(function (api, where) {
     //-----------------------
     // Client only.
 
+    // Markdown compiler.
     api.add_files('client/lib/marked.js', 'client');
 
     // Styles.
@@ -55,20 +57,22 @@ Package.on_use(function (api, where) {
 
     // Views.
     api.add_files('client/views/post-list.html', 'client');
-    api.add_files('client/views/post-list.ts', 'client');
     api.add_files('client/views/post-detail.html', 'client');
-    api.add_files('client/views/post-detail.ts', 'client');
     api.add_files('client/views/login.html', 'client');
-    api.add_files('client/views/login.ts', 'client');
     api.add_files('client/views/post-editor.html', 'client');
-    api.add_files('client/views/post-editor.ts', 'client');
     api.add_files('client/index.html', 'client');
 
-    // Code.
+    // Global.
     api.add_files('client/config.ts', 'client');
-    api.add_files('client/router.ts', 'client');
-    api.add_files('client/global.ts', 'client');
     api.add_files('client/app.ts', 'client');
+    api.add_files('client/global.ts', 'client');
+    api.add_files('client/router.ts', 'client');
+
+    // Controllers.
+    api.add_files('client/controllers/post-list.ts', 'client');
+    api.add_files('client/controllers/post-detail.ts', 'client');
+    api.add_files('client/controllers/login.ts', 'client');
+    api.add_files('client/controllers/post-editor.ts', 'client');
 
     //-----------------------
     // Server only.

@@ -1,7 +1,7 @@
 /// <reference path='../../shared/models.ts' />
 
 declare var Meteor;
-declare var ngMeteor;
+declare var App;
 declare var Session;
 declare var Deps;
 declare var decodeURIComponent;
@@ -10,7 +10,7 @@ declare var console;
 declare var Error;
 declare var parseInt;
 
-ngMeteor.factory('post_list', ['$q', '$rootScope',
+App.factory('post_list', ['$q', '$rootScope',
     function($q, $rootScope) {
         return {
             get: function(stateParams) {
@@ -34,7 +34,7 @@ ngMeteor.factory('post_list', ['$q', '$rootScope',
 ]);
 
 
-ngMeteor.controller('PostListCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 'data',
+App.controller('PostListCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 'data',
     function ($scope, $rootScope, $state, $stateParams, data) {
 
         _.extend($scope, data);
