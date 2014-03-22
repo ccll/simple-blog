@@ -39,5 +39,9 @@ App.controller('PostListCtrl', ['$scope', '$rootScope', '$state', '$stateParams'
 
         _.extend($scope, data);
 
+        $scope.gotoPostDetail = function(post_id:string) {
+            $state.go('post-detail', {id:post_id});
+        };
+
     }
 ]);

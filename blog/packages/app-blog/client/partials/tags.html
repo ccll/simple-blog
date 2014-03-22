@@ -1,10 +1,12 @@
 <template name="tags">
-    <ul class="list-unstyled">
+    <ul class="list-unstyled tag-cloud">
 
         <!-- View all posts -->
-        <li ng-class="{'active':!tag}" class="tag">
+        <li class="">
             <a ui-sref="post-list({tag:null, page:null})"
-                class="clickable-text">
+                ng-class="{'active':!tag}"
+                rel="nofollow"
+                class="clickable-text tag">
                     <i class="fa fa-bars fa-fw"></i>
                     所有
             </a>
@@ -12,10 +14,11 @@
 
         <!-- View specific tag -->
         <li ng-repeat="t in post_list.tags"
-            ng-class="{'active':t==tag}"
-            class="tag">
+            class="">
             <a ui-sref="post-list({tag:encodeURIComponent(t), page:null})"
-                class="clickable-text">
+                ng-class="{'active':t==tag}"
+                rel="nofollow"
+                class="clickable-text tag">
                     <i class="fa fa-tags fa-fw"></i>
                     [[ t ]]
             </a>

@@ -27,7 +27,13 @@ Meteor.methods({
         var limit = config.posts_per_page;
         var offset = limit * (page-1);
         var posts = Posts.find(query,
-            {sort: {created_at:-1}, skip:offset, limit: limit}).fetch();
+            {
+                sort: {created_at:-1},
+                skip:offset,
+                limit: limit,
+                fields: {content: 0}
+            })
+            .fetch();
 
         // Total pages.
         var per_page = config.posts_per_page;

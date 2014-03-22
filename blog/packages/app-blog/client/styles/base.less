@@ -300,18 +300,18 @@
   border-radius: @radius;
   font-family: "Hiragino Mincho Pro", serif;
 
-  a {
-    padding: 2px 4px !important;
-    margin: 3px 0;
-  }
+  padding: 1px 2px !important;
+  margin: 0;
+}
+
+.tag-cloud .tag {
+  padding: 3px 4px !important;
+  margin: 3px 0;
 }
 
 .tag.active {
   background-color: #39b3d7;
-
-  a {
-    color: white;
-  }
+  color: white;
 }
 
 .tag:hover:not(.active) {
@@ -320,6 +320,10 @@
 
 .color-grey {
   color: #bbb;
+}
+
+.color-black {
+  color: black !important;
 }
 
 .block {
@@ -341,18 +345,18 @@
 }
 
 .post-item {
-  padding: 10px 10px;
-  border-bottom: 1px dashed #ccc;
+  padding: 10px;
+  // border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #e1e8ed;
 }
 
-.post-item:hover,
-.post-item:focus {
+.post-item:hover {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #f5f8fa;
 }
 
 .post-list .post-item:first-child {
-  border-top: 1px dashed #ccc;
+  // border-top: 1px dashed #ccc;
 }
 
 .post-list .post-item:last-child {
@@ -364,6 +368,10 @@
   font-size: 22px;
   font-weight: 300;
   margin-bottom: 6px;
+}
+
+.post-item .tag:hover {
+  background-color: #ddd;
 }
 
 .strike-through-text {

@@ -7,27 +7,34 @@
 
             <div class="col-sm-12">
 
+                <!-- title -->
                 <div class="bfc">
                     <div class="pull-left">
-                        <h2>[[ post.title ]]</h2>
+                        <h2>[[post.title]]</h2>
                     </div>
                 </div>
 
-                <h5><i class="fa fa-calendar fa-fw"></i> [[ format_date(post.created_at) ]]</h5>
+                <!-- date -->
+                <h5 class="color-grey text-80percent">
+                    <i class="fa fa-calendar fa-fw"></i>
+                    [[format_date(post.created_at)]]
+                </h5>
 
-                <ul class="list-inline">
+                <!-- tags -->
+                <ul class="list-inline opacity-60 text-80percent">
                     <li ng-repeat="t in post.tags" class="tag">
                         <a ui-sref="post-list({tag: encodeURIComponent(t)})"
+                            rel="nofollow"
                             class="clickable-text">
-                                <i class="fa fa-tags fa-fw"></i>[[t]]
+                                <i class="fa fa-tags fa-fw"></i>
+                                [[t]]
                         </a>
                     </li>
                 </ul>
 
-                <hr />
-
                 <div class="margin-bottom-10"></div>
 
+                <!-- contents -->
                 <div markdown="post.content"></div>
 
             </div>

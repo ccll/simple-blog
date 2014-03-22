@@ -14,7 +14,7 @@ declare var Meteor;
 
 // Config post list.
 var config = {
-    posts_per_page: 6
+    posts_per_page: 5
 };
 this.config = config;
 
