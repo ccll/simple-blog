@@ -1,41 +1,40 @@
 <template name="header">
-    <div class="navbar navbar-inverse">
-        <div class="container">
+  <div class="navbar navbar-inverse">
+  <div class="container">
 
-            <div class="header">
+    <div class="header">
 
-                <div class="navbar-header">
-                    <a class="navbar-brand block" ui-sref="post-list({tag:null, page:null})">
-                        <i class="fa fa-home"></i>
-                        <span class="text-90percent">CCLL的编程备忘录</span>
-                    </a>
-                </div>
+      <div class="navbar-header">
+        <a class="navbar-brand block" ui-sref="post-list({tag:null, page:null})">
+          <i class="fa fa-home"></i>
+          <span class="text-90percent">CCLL的编程备忘录</span>
+        </a>
+      </div>
 
-                <div class="navbar-collapse collapse navbar-inverse-collapse col-sm-offset-2">
+      <div class="navbar-collapse collapse navbar-inverse-collapse col-sm-offset-2">
 
-                    <ul class="nav navbar-nav navbar-left" ng-show="$user">
-                        <li ng-if="$state.is('post-list')"><a ui-sref="post-editor">New</a></li>
+        <ul class="nav navbar-nav navbar-left" ng-show="$user">
+          <li ng-if="$state.is('post-list')"><a ui-sref="post-editor">New</a></li>
 
-                        <li ng-if="$state.is('post-detail')"><a ui-sref="post-editor({id:$stateParams.id})">Edit</a></li>
+          <li ng-if="$state.is('post-detail')"><a ui-sref="post-editor({id:$stateParams.id})">Edit</a></li>
 
-                        <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="save_as_draft()">Save as draft</a></li>
-                        <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="publish()">Publish</a></li>
-                    </ul>
+          <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="save_as_draft()">Save as draft</a></li>
+          <li ng-if="$state.is('post-editor')"><a class="cursor-hand" ng-click="publish()">Publish</a></li>
+        </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="https://github.com/ccll" target="_blank" rel="nofollow"><i class="fa fa-github fa-lg"></i></a>
-                        </li>
-                    </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="https://github.com/ccll" target="_blank" rel="nofollow"><i class="fa fa-github fa-lg"></i></a>
+          </li>
+          <li ng-show="login || $user">
+            {{loginButtons align="right"}}
+          </li>
+        </ul>
 
-                    <ul class="nav navbar-nav navbar-right" ng-show="login || $user">
-                        {{loginButtons align="right"}}
-                    </ul>
+      </div>
 
-                </div>
-
-            </div>
-
-        </div>
     </div>
+
+  </div>
+</div>
 </template>

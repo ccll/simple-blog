@@ -3,6 +3,7 @@
 declare var Meteor;
 declare var App;
 declare var Session;
+declare var Template;
 declare var Deps;
 declare var decodeURIComponent;
 declare var _;
@@ -32,6 +33,18 @@ App.factory('$postList', ['$q', '$rootScope',
         }
     }
 ]);
+
+var PostListRouteConfig = {
+    url: "/?tag&page",
+    template: Template['post-list'],
+    resolve: {
+        data: ['$postList', '$stateParams', function ($postList, $stateParams) {
+            return $postList.get($stateParams);
+        }]
+    },
+    controller: 'PostListCtrl'
+};
+this.PostListRouteConfig = PostListRouteConfig;
 
 
 App.controller('PostListCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 'data',

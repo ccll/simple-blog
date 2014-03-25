@@ -63,17 +63,19 @@ Package.on_use(function (api, where) {
     api.add_files('client/views/post-editor.html', 'client');
     api.add_files('client/index.html', 'client');
 
-    // Global.
+    // Global initialization.
     api.add_files('client/config.ts', 'client');
     api.add_files('client/app.ts', 'client');
     api.add_files('client/global.ts', 'client');
-    api.add_files('client/router.ts', 'client');
 
     // Controllers.
     api.add_files('client/controllers/post-list.ts', 'client');
     api.add_files('client/controllers/post-detail.ts', 'client');
     api.add_files('client/controllers/login.ts', 'client');
     api.add_files('client/controllers/post-editor.ts', 'client');
+
+    // Routes.
+    api.add_files('client/router.ts', 'client');
 
     //-----------------------
     // Server only.
