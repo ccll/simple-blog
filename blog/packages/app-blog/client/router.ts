@@ -6,6 +6,7 @@ declare var decodeURIComponent;
 declare var Random;
 declare var PostListRouteConfig;
 declare var PostDetailRouteConfig;
+declare var UiRouter;
 
 App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -15,15 +16,16 @@ App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     $stateProvider.state('post-list', PostListRouteConfig);
     $stateProvider.state('post-detail', PostDetailRouteConfig);
 
+
     $stateProvider.state('login', {
       url: "/login",
-      template: Template['login'],
+      template: UiRouter.template('login'),
       controller: 'LoginCtrl'
     });
 
     $stateProvider.state('post-editor', {
       url: "/edit/:id",
-      template: Template['post-editor'],
+      template: UiRouter.template('post-editor'),
       resolve: {
         data: ['post', '$stateParams', function (post, $stateParams) {
           if ($stateParams.id) {

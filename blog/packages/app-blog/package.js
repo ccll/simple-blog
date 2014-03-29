@@ -16,11 +16,10 @@ Package.on_use(function (api, where) {
     api.use('spiderable-ui-router', ['client', 'server']);
 
     // Client only.
-    api.use('preserve-inputs', 'client');
+    api.use('templating', 'client');
     api.use('accounts-ui', 'client');
     api.use('session', 'client');
     api.use('less', 'client');
-    api.use('templating', 'client');
     api.use('angularite', 'client');
     api.use('angular-ui-router', 'client');
     api.use('fontawesome4', 'client');

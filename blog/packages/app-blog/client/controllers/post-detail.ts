@@ -5,6 +5,7 @@ declare var Meteor;
 declare var Template;
 declare var _;
 declare var marked;
+declare var UiRouter;
 
 App.directive('markdown', function () {
   return {
@@ -45,7 +46,7 @@ App.factory('$postDetail', ['$q', '$rootScope',
 
 var PostDetailRouteConfig = {
   url: "/post/:id",
-  template: Template['post-detail'],
+  template: UiRouter.template('post-detail'),
   resolve: {
     data: ['$postDetail', '$stateParams', function ($postDetail, $stateParams) {
       return $postDetail.get($stateParams.id);

@@ -4,19 +4,19 @@
       "version": "0.7.7.2"
     },
     "angular-ui-router": {
-      "path": "/Users/cailei/proj/oss/mrt/angular-ui-router"
+      "version": "0.3.1"
     },
     "underscore-string-latest": {
       "version": "2.3.3"
     },
     "angular-bootstrap": {
-      "path": "/Users/cailei/proj/oss/mrt/angular-bootstrap"
+      "version": "0.1.2"
     },
     "angularite": {
-      "path": "/Users/cailei/proj/oss/mrt/angularite"
+      "version": "0.1.2"
     },
     "spiderable-ui-router": {
-      "path": "/Users/cailei/proj/oss/mrt/spiderable-ui-router"
+      "version": "0.1.5"
     },
     "mongo-ext": {
       "version": "0.1.0"

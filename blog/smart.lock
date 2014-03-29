@@ -6,19 +6,19 @@
         "version": "0.7.7.2"
       },
       "angular-ui-router": {
-        "path": "../../../oss/mrt/angular-ui-router"
+        "version": "0.3.1"
       },
       "underscore-string-latest": {
         "version": "2.3.3"
       },
       "angular-bootstrap": {
-        "path": "../../../oss/mrt/angular-bootstrap"
+        "version": "0.1.2"
       },
       "angularite": {
-        "path": "../../../oss/mrt/angularite"
+        "version": "0.1.2"
       },
       "spiderable-ui-router": {
-        "path": "../../../oss/mrt/spiderable-ui-router"
+        "version": "0.1.5"
       },
       "mongo-ext": {
         "version": "0.1.0"
@@ -38,7 +38,9 @@
         "commit": "2c1525e95f1f061674951fc7c807f77295b66fc6"
       },
       "angular-ui-router": {
-        "path": "../../../oss/mrt/angular-ui-router"
+        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
+        "tag": "v0.3.1",
+        "commit": "16e79bcf816d461a626d32e0c0530040fc98f13f"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
@@ -46,13 +48,19 @@
         "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
       },
       "angular-bootstrap": {
-        "path": "../../../oss/mrt/angular-bootstrap"
+        "git": "https://github.com/ccll/meteor-angular-bootstrap.git",
+        "tag": "v0.1.2",
+        "commit": "ba277977a4ebc0b56e62facdfd336375db3ce44c"
       },
       "angularite": {
-        "path": "../../../oss/mrt/angularite"
+        "git": "https://github.com/ccll/meteor-angularite.git",
+        "tag": "v0.1.2",
+        "commit": "99b88aca935be75b5d31b41c10dc94480dad1821"
       },
       "spiderable-ui-router": {
-        "path": "../../../oss/mrt/spiderable-ui-router"
+        "git": "https://github.com/ccll/meteor-spiderable-ui-router.git",
+        "tag": "v0.1.5",
+        "commit": "0f90963a381445882bc1ad28dc3b9da875414337"
       },
       "mongo-ext": {
         "git": "https://github.com/alethes/meteor-mongo-ext.git",

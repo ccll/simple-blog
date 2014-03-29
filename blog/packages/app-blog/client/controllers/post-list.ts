@@ -10,6 +10,7 @@ declare var _;
 declare var console;
 declare var Error;
 declare var parseInt;
+declare var UiRouter;
 
 App.factory('$postList', ['$q', '$rootScope',
     function($q, $rootScope) {
@@ -36,7 +37,7 @@ App.factory('$postList', ['$q', '$rootScope',
 
 var PostListRouteConfig = {
     url: "/?tag&page",
-    template: Template['post-list'],
+    template: UiRouter.template('postList'),
     resolve: {
         data: ['$postList', '$stateParams', function ($postList, $stateParams) {
             return $postList.get($stateParams);
