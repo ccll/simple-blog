@@ -6,7 +6,7 @@
         "version": "0.7.7.2"
       },
       "angular-ui-router": {
-        "version": "0.3.1"
+        "version": "0.3.2"
       },
       "underscore-string-latest": {
         "version": "2.3.3"
@@ -36,11 +36,6 @@
         "git": "https://github.com/orefalo/meteor-typescript-compiler.git",
         "tag": "v0.7.7.2",
         "commit": "2c1525e95f1f061674951fc7c807f77295b66fc6"
-      },
-      "angular-ui-router": {
-        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
-        "tag": "v0.3.1",
-        "commit": "16e79bcf816d461a626d32e0c0530040fc98f13f"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

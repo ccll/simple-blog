@@ -1,72 +1,76 @@
 <template name="posts">
-
-    <div ng-show="!err">
-        <div>
-            {{> postTable}}
-        </div>
-
-        <div ng-show="post_list.page_count > 1" class="text-center">
-            {{> post_pagination}}
-        </div>
+  <div ng-show="!err">
+    <div>
+      {{> postTable}}
     </div>
-
-    <div ng-show="err">
-        [[err.reason]]
+    <div ng-show="postList.pageCount > 1" class="text-center">
+      {{> post_pagination}}
     </div>
+  </div>
 
+  <div ng-show="err">
+    [[err.reason]]
+  </div>
 </template>
 
 
 <template name="postTable">
-    <div class="post-list">
-        <!-- click the entire div will goto post detail -->
-        <div ng-repeat="p in post_list.posts" class="post-item clickable-text"
-            ng-click="gotoPostDetail(p._id)">
+  <div class="post-list">
+    <!-- click the entire div will goto post detail -->
+    <div ng-repeat="p in postList.posts" class="post-item clickable-text"
+         ng-click="gotoPostDetail(p._id)">
 
-            <!-- this href exists only for search engien crawlers -->
-            <div><a ui-sref="post-detail({id:p._id})" class="title clickable-text color-black">[[p.title]]</a></div>
+      <!-- this href exists only for search engine crawlers -->
+      <div><a ui-sref="postDetail({id:p._id})"
+              class="title clickable-text color-black">[[p.title]]</a></div>
 
-            <div class="color-grey text-80percent"><i class="fa fa-calendar fa-fw"></i> [[format_date(p.created_at)]]</div>
-            <div class="row no-compensation color-grey text-80percent">
-                <div class="pull-left opacity-60">
-                    <ul class="list-inline">
-                        <li ng-repeat="t in p.tags" class="tag">
-                            <a ui-sref="post-list({tag: encodeURIComponent(t)})"
-                                rel="nofollow"
-                                class="clickable-text">
-                                    <i class="fa fa-tags fa-fw"></i>[[t]]
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="color-grey text-80percent">
+        <i class="fa fa-calendar fa-fw"></i> [[format_date(p.created_at)]]
+      </div>
 
-                <div class="pull-right">
-                    <i class="fa fa-comments fa-fw"></i> 32个回复
-                </div>
-            </div>
+      <div class="row no-compensation color-grey text-80percent">
+        <div class="pull-left opacity-60">
+          <ul class="list-inline">
+            <li ng-repeat="t in p.tags" class="tag">
+              <a ui-sref="postList({tag: encodeURIComponent(t)})"
+                 rel="nofollow"
+                 class="clickable-text">
+                <i class="fa fa-tags fa-fw"></i>[[t]]
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <div class="pull-right">
+          <i class="fa fa-comments fa-fw"></i> 32个回复
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 
 <template name="post_pagination">
-    <ul class="pagination">
+  <ul class="pagination">
 
-        <!-- left arrow -->
-        <li ng-class="{'disabled':page*1<=1}">
-            <a ng-if="page*1<=1">&lsaquo;</a>
-            <a ng-if="page*1>1" ui-sref="post-list({page: page*1-1})">&lsaquo;</a>
-        </li>
+    <!-- left arrow -->
+    <li ng-class="{'disabled':page*1<=1}">
+      <a ng-if="page*1<=1">&lsaquo;</a>
+      <a ng-if="page*1>1" ui-sref="postList({page: page*1-1})">&lsaquo;</a>
+    </li>
 
-        <!-- pages -->
-        <li ng-repeat="pno in [1, post_list.page_count] | range" ng-class="{active:pno*1==page*1}">
-            <a ui-sref="post-list({page:pno})">[[pno]]</a>
-        </li>
+    <!-- pages -->
+    <li ng-repeat="pno in [1, post_list.pageCount] | range"
+        ng-class="{active:pno*1==page*1}">
+      <a ui-sref="postList({page:pno})">[[pno]]</a>
+    </li>
 
-        <!-- right arrow -->
-        <li ng-class="{'disabled':page*1>=post_list.page_count*1}">
-            <a ng-if="page*1>=post_list.page_count*1">&rsaquo;</a>
-            <a ng-if="page*1<post_list.page_count*1" ui-sref="post-list({page: page*1+1})">&rsaquo;</a>
-        </li>
-    </ul>
+    <!-- right arrow -->
+    <li ng-class="{'disabled':page*1>=post_list.pageCount*1}">
+      <a ng-if="page*1>=post_list.pageCount*1">&rsaquo;</a>
+      <a ng-if="page*1<post_list.pageCount*1"
+         ui-sref="postList({page: page*1+1})">&rsaquo;</a>
+    </li>
+
+  </ul>
 </template>

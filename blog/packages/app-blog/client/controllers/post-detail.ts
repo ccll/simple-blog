@@ -25,23 +25,6 @@ App.directive('markdown', function () {
 });
 
 App.factory('$postDetail', ['$q', '$rootScope',
-  function ($q, $rootScope) {
-    return {
-      get: function (post_id:string):Post {
-        var defer = $q.defer();
-        Meteor.call('get_post', post_id, function (err, post) {
-          $rootScope.safeApply(function () {
-            if (err) {
-              defer.resolve({err: err});
-            } else {
-              defer.resolve({post: post});
-            }
-          });
-        });
-        return defer.promise;
-      }
-    }
-  }
 ]);
 
 var PostDetailRouteConfig = {

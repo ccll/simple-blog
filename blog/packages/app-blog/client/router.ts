@@ -6,6 +6,9 @@ declare var decodeURIComponent;
 declare var Random;
 declare var PostListRouteConfig;
 declare var PostDetailRouteConfig;
+declare var PostEditorRouteConfig;
+declare var CmsRouteConfig;
+declare var CmsPostDetailRouteConfig;
 declare var UiRouter;
 
 App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
@@ -13,32 +16,13 @@ App.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     $locationProvider.html5Mode(true);
 
     $urlRouterProvider.otherwise("/");
-    $stateProvider.state('post-list', PostListRouteConfig);
-    $stateProvider.state('post-detail', PostDetailRouteConfig);
 
+    $stateProvider.state('postList', PostListRouteConfig);
+    $stateProvider.state('postDetail', PostDetailRouteConfig);
+    $stateProvider.state('postEditor', PostEditorRouteConfig);
 
-    $stateProvider.state('login', {
-      url: "/login",
-      template: UiRouter.template('login'),
-      controller: 'LoginCtrl'
-    });
-
-    $stateProvider.state('post-editor', {
-      url: "/edit/:id",
-      template: UiRouter.template('post-editor'),
-      resolve: {
-        data: ['post', '$stateParams', function (post, $stateParams) {
-          if ($stateParams.id) {
-            // Read post from server.
-            return post.get($stateParams.id);
-          } else {
-            // Generate a empty post with a new random id.
-            $stateParams.id = Random.id();
-            return {post:{_id: $stateParams.id}};
-          }
-        }]
-      },
-      controller: 'PostEditorCtrl'
-    });
+    $stateProvider.state('login', {url: "/login", controller: 'LoginCtrl'});
+    $stateProvider.state('cms', CmsRouteConfig);
+    $stateProvider.state('cms.postDetail', CmsPostDetailRouteConfig);
   }
 ]);

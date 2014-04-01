@@ -1,28 +1,31 @@
 <template name="tags">
-    <ul class="list-unstyled tag-cloud">
+  {{! Accept param:
+      targetState: when clicking tags, will jump to this state
+  }}
 
-        <!-- View all posts -->
-        <li class="">
-            <a ui-sref="post-list({tag:null, page:null})"
-                ng-class="{'active':!tag}"
-                rel="nofollow"
-                class="clickable-text tag">
-                    <i class="fa fa-bars fa-fw"></i>
-                    所有
-            </a>
-        </li>
+  <ul class="list-unstyled tag-cloud">
 
-        <!-- View specific tag -->
-        <li ng-repeat="t in post_list.tags"
-            class="">
-            <a ui-sref="post-list({tag:encodeURIComponent(t), page:null})"
-                ng-class="{'active':t==tag}"
-                rel="nofollow"
-                class="clickable-text tag">
-                    <i class="fa fa-tags fa-fw"></i>
-                    [[ t ]]
-            </a>
-        </li>
-    </ul>
+    <!-- View all posts -->
+    <li class="">
+      <a ui-sref="{{targetState}}({tag:null, page:null})"
+         ng-class="{'active':!tag}"
+         rel="nofollow"
+         class="clickable-text tag">
+        所有
+      </a>
+    </li>
+
+    <!-- View specific tag -->
+    <li ng-repeat="t in postList.tags"
+        class="">
+      <a ui-sref="{{targetState}}({tag:encodeURIComponent(t), page:null})"
+         ng-class="{'active':t==tag}"
+         rel="nofollow"
+         class="clickable-text tag">
+        <i class="fa fa-tags fa-fw"></i>
+        [[t]]
+      </a>
+    </li>
+  </ul>
 </template>
 

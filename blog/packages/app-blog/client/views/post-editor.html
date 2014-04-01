@@ -1,29 +1,23 @@
-<template name="post-editor">
-
-    <div class="container">
-        <div class="row root-wrapper">
-
-            {{> preview}}
-
-            {{> editor}}
-
-        </div>
+<template name="postEditor">
+  <div class="container">
+    <div class="row root-wrapper">
+      {{> preview}}
+      {{> editor}}
     </div>
-
+  </div>
 </template>
-
 
 <template name="preview">
-    <div class="preview-wrapper">
-        <div>Preview</div>
-        <div class="preview" markdown="post.content"></div>
-    </div>
+  <div class="preview-scroller">
+    <div>Preview</div>
+    <div class="preview" markdown="post.content"></div>
+  </div>
 </template>
 
-
 <template name="editor">
-    <div class="editor-wrapper">
-        <div>Edit</div>
-        <textarea ng-model="post.content" class="text-editor" ng-keydown="on_key_down($event)"></textarea>
-    </div>
+  <div class="editor-scroller">
+    <div>Edit</div>
+    <textarea ng-model="post.content" class="text-editor"
+              ng-keydown="on_key_down($event)"></textarea>
+  </div>
 </template>
